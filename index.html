@@ -75,13 +75,21 @@
       <h2 class="text-3xl font-bold text-[#0f172a] text-center mb-6">Example Code</h2>
       <div class="bg-[#0f172a] text-green-400 rounded-xl p-6 text-sm md:text-base font-mono shadow-lg overflow-x-auto">
 <pre>
-cell liverCell(type A) {
-  network regulation(input) {
-    gene P53 {
-      expression: activate;
-    }
-  }
-}
+import insulin
+		
+		mol glucose(){
+			@energySource = main;
+			@storage = glycogen;
+			num molecularWeight = 180.16g/mol;
+			struct chemicalStructure = cyclic_monosaccharide;
+			bool waterSoluble = true;
+		}
+		
+		cell PancreaticBetaCell(){
+			detect(if(glucose>250mg/Dl)){
+				release(insulin, 0.8); //0.8 production rate
+			}
+		}
 </pre>
       </div>
     </section>
@@ -115,3 +123,4 @@ cell liverCell(type A) {
 
 </body>
 </html>
+
